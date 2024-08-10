@@ -1,0 +1,193 @@
+/* ------ TITTLE ------ */
+
+.App-tittle {
+    min-height: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .App-tittle h1{
+    font-size: 20px;
+    color: #fff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    align-items: center;
+  }
+
+/* ------ CALCULATOR ------ */
+
+.App-buttonHistory {
+    width: 220px;
+    margin: auto;
+    display: flex;
+    justify-content: right;
+}
+
+.App-buttonHistory button{
+    background-color: #5b6886;
+    border-radius: 2px;
+    cursor: pointer;
+    border: 0px;
+    margin-bottom: 10px;
+}
+
+.link{
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 10px;
+}
+
+.App-calculator {
+    width: 220px;
+    margin: auto;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 2px;
+    border: solid 2px #5b6886;
+}
+
+.App-screen {
+    width: 206px;
+    height: 100%;
+    background-color: aliceblue;
+    margin: auto;
+    border-radius: 2px;
+    padding: 0px;
+    margin-bottom: 4px;
+    margin-top: 10px;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: right;
+}
+
+.Operations {
+    width: 206px;
+    margin: auto;
+}
+
+.Operations p{
+    width: 186px;
+    text-align: right;
+    margin: 0px 10px;
+    padding: 5px 0px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 15px;
+    letter-spacing: 1.5px;
+    word-wrap: break-word;
+}
+
+.Results {
+    width: 206px;
+    margin: auto;
+}
+
+.Results p{
+    width: 186px;
+    text-align: right;
+    margin: 0px 10px;
+    padding: 5px 0px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 15px;
+}
+
+.App-button {
+    margin: auto;
+    width: 206px;
+    height: 100%;
+    display: grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap: 2px;
+    padding: 0px;
+    margin-bottom: 10px;
+}
+
+.App-button button {
+    height: 50px;
+    width: 50px;
+    background-color: #838ba0;
+    border-radius: 2px;
+    border: 0px;
+    padding: 0px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+}
+.App-button button:first-child{
+    grid-column: span 2;
+    width: 102px;
+    height: 30px;
+}
+
+.App-button button:nth-child(2){
+    grid-column: span 2;
+    width: 102px;
+    height: 30px;
+}
+
+.App-button button:nth-child(14) {
+    grid-row: span 2;
+    height: 102px;
+}
+
+.App-button button:nth-child(21) {
+    font-size: 30px;
+    grid-row: span 2;
+    height: 102px;
+}
+
+.App-button button:nth-last-child(2) {
+    grid-column: span 2;
+    width: 102px;
+}
+
+
+/* ------ HISTORY ------ */
+
+.App-history {
+    width: 250px;
+    margin: auto;
+}
+
+.App-tittleHistory {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 8px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+    margin: auto;
+    border-bottom: solid 1px #5f5858;
+}
+
+.App-tittleHistory button {
+    background-color: #3a3535;
+    border: 0px;
+    cursor: pointer;
+    margin: 0;
+}
+
+.iconArrow {
+    font-size: 16px;
+    color: #fff;
+}
+
+.iconTrash {
+    font-size: 15px;
+    color: #fff;
+}
+
+li {
+    border-bottom: 1px solid #867d7d;
+    list-style-type: none ;
+    padding: 5px;
+    align-items: center;
+    text-align: left;
+    color: #fff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    word-wrap: break-word;
+}

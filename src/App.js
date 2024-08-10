@@ -1,25 +1,27 @@
-import logo from './logo.svg';
+import React from "react";
+import { Route, Routes} from 'react-router-dom';
 import './App.css';
+import HistoryProvider from './Providers/HistoryProvider'
+import Calculator from './Components/Calculator';
+
+import History from "./Components/History";
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+    <HistoryProvider>
+        <Routes>
+          <Route exact path="/" element={<Calculator/>}></Route>
+          <Route path="/history" element={<History />}></Route>
+        </Routes>
+    </HistoryProvider>
+
     </div>
   );
 }
 
 export default App;
+
+// history={history} clearHistory={clearHistory}
