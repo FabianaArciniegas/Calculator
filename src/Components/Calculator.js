@@ -48,12 +48,8 @@ const Calculator = () => {
 
   const handleResult = useCallback(() => {
     try {
-      // Maneja la multiplicación, porcentaje y exponentes
-      let expression = calculations.replace(/x/g, '*').replace(/%/g, '/100*').replace(/\^/g, '**');;
-      // Maneja la multiplicación implícita con paréntesis
-      expression = expression.replace(/(\d)(\()/g, '$1*(').replace(/(\))(\d)/g, ')*$2');
-      // Manejar la raíz cuadrada usando Math.sqrt
-      expression = expression.replace(/√(\d+)/g, 'Math.sqrt($1)');
+      // Maneja la multiplicación, porcentaje, exponentes y raiz cuadrada
+      let expression = calculations.replace(/x/g, '*').replace(/%/g, '/100*').replace(/\^/g, '^').replace(/√(\d+(\.\d+)?)/g, 'sqrt($1)') ;
 
       const evalResult = evaluate(expression);
       setResult(evalResult);
@@ -82,7 +78,7 @@ const Calculator = () => {
       handleClick("^");
       }
       // Maneja la raíz cuadrada usando r
-      else if (key === "r" || key === "v") {
+      else if (key === "r" || key === "v" || key === "√") {
       handleClick("√");
       }
       // Ejecuta el cálculo al presionar Enter o =
@@ -134,7 +130,7 @@ const Calculator = () => {
           <button onClick={() => handleClick("√")}>√</button>
           <button onClick={() => handleClick("%")}>%</button>
           <button onClick={() => handleClick("/")}>/</button>
-          <button onClick={() => handleClick("x")}>x</button>
+          <button onClick={() => handleClick("x")}>*</button>
           <button onClick={() => handleClick("-")}>-</button>
           <button onClick={() => handleClick("7")}>7</button>
           <button onClick={() => handleClick("8")}>8</button>
